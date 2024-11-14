@@ -254,6 +254,12 @@ function navegarSeccions() {
 
 
 
+
+
+
+
+
+
 function dataFooter() {
     const ara = new Date();
     
