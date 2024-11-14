@@ -188,5 +188,68 @@ function comprovaSkills() {
         alert('ERROR: CODI INCORRECTE \n\nTorna-ho a provar..');
     }
 }
+function mostraContacte() {
+    document.getElementById('skills').style.display = 'none';
+    document.getElementById('contacte').style.display = 'block';
+}
+function comprovaCodiContacte() {
+    const codi = document.getElementById('codiContacte').value.trim();
+    if (codi === "9") { 
+        document.getElementById('acertijoContacte').style.display = 'none'; 
+        document.getElementById('contacteForm').style.display = 'block'; 
+    } else {
+        alert('ERROR: CODI INCORRECTE. Torna-ho a provar.');
+    }
+}
+function mostraGracies() {
+    document.getElementById('gracies').style.display = 'block';
+    document.getElementById('contacte').style.display = 'none'; 
+    document.getElementById('skills').style.display = 'none';
+    document.getElementById('projectes').style.display = 'none';
+    document.getElementById('sobreMi').style.display = 'none'; 
+    document.querySelectorAll('button').forEach(boto => {
+        if (boto.textContent !== 'Reiniciar Escape Room' && boto.textContent !== 'Navegar Seccions') {
+            boto.style.display = 'none'; 
+        }
+    });
+}
+
+function contacte(event) {
+    event.preventDefault(); 
+
+    document.getElementById('contacte').style.display = 'none';
+
+    
+    document.getElementById('gracies').style.display = 'block';
+}
+
+function reiniciarEscapeRoom() {
+    document.getElementById('finalButtons').style.display = 'none';
+    document.getElementById('benvi').style.display = 'flex';  
+    document.getElementById('instruccions').style.display = 'none';
+    document.getElementById('principal').style.display = 'none';
+    document.getElementById('sobreMi').style.display = 'none';
+    document.getElementById('projectes').style.display = 'none';
+    document.getElementById('skills').style.display = 'none';
+    document.getElementById('contacte').style.display = 'none';
+    document.getElementById('navbar').style.display = 'none'; 
+}
+function mostrarNavbar() {
+    document.getElementById('navbar').style.display = 'block'; 
+}
+
+function recarregaPag() {
+    location.reload();
+}
+
+
+function navegarSeccions() {
+ 
+    document.getElementById('navbar').style.display = 'block';
+    document.getElementById('finalButtons').style.display = 'none'; 
+
+   
+    document.getElementById('contacte').style.display = 'none';
+}
 
 

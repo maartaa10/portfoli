@@ -53,7 +53,41 @@
         <button onclick="comprovaSkills()">Seguent</button>
         <div id="skillsTot"></div>
     </section>
+    <section id="contacte" class="seccioCont">
+        <h2>Contacte</h2>
+        <div id="acertijoContacte">
+            <p>Resol aquesta endevinalla: Quin és l'únic nombre que és igual a la suma de les seves xifres?</p>
+            <input type="text" id="codiContacte" placeholder="Introdueix el codi">
+            <button onclick="comprovaCodiContacte()">Mostrar Formulari</button>
+        </div>
+        <form id="contacteForm" onsubmit="contacte(event)" style="display: none;">
+            <div class="formTot">
+                <label for="nomC">Nom:</label>
+                <input type="text" id="nomC" name="nom">
+            </div>
+            <div class="formTot">
+                <label for="email">Correu:</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div class="formTot">
+                <label for="missatge">Missatge:</label>
+                <textarea id="missatge" name="missatge"></textarea>
+            </div>
+            <button type="submit" class="enviaBt">Enviar</button>
+        </form>
+    </section>
     
+    
+    <section id="gracies" class="seccioCont" style="display: none;">
+        <div id="finalButtons">
+            <p>Gràcies per jugar! Has desbloquejat totes les seccions. Pots navegar lliurement o reiniciar el joc.</p>
+            <button onclick="reiniciarEscapeRoom()">Reiniciar Escape Room</button>
+            <button onclick="navegarSeccions()">Navegar Seccions</button>
+        </div>
+    </section>
+
+
+
 
 
 

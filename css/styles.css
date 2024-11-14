@@ -170,3 +170,58 @@ button:hover {
     color: #00FF00;
     border: 1px solid #00FF00;
 }
+form {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #00ff00;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.3);
+    width: 400px;
+    margin: 20px auto;
+}
+
+.formTot {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #333;
+    color: #00ff00;
+    border: 2px solid #00ff00;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+.enviaBt {
+    width: 100%;
+    padding: 12px;
+    background-color: #00ff00;
+    color: #000;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+.enviaBt:hover {
+    background-color: #33ff33;
+    transition: background-color 0.3s ease;
+}
+
+
