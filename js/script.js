@@ -253,3 +253,20 @@ function navegarSeccions() {
 }
 
 
+
+function dataFooter() {
+    const ara = new Date();
+    
+    
+    const dataFormt = ara.toLocaleDateString('es-ES'); 
+
+    
+    const dataIni = new Date(2024, 8, 16); 
+    const temps = ara - dataIni; 
+    const QuantDies = Math.floor(temps / (1000 * 60 * 60 * 24));
+    
+    document.getElementById('dataInfo').textContent = `Data: ${dataFormt} | Dies des del 16/09/2024: ${QuantDies}`;
+}
+
+
+dataFooter();
