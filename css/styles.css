@@ -64,3 +64,110 @@ body {
 #navbar a:hover {
     color: white;
 }
+.projectesTot {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.targ {
+    background-color: #333;
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #00FF00;
+    width: 100%;
+    max-width: 300px; 
+    color: #00FF00;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: blue;
+}
+.targ img {
+    width: 100%;
+    height: auto;
+    border: 1px solid #00FF00;
+}
+
+
+
+
+#skillsTot {
+    display: flex;
+    justify-content: space-around; 
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.skillsColumn {
+    flex: 1;
+    min-width: 300px; 
+    max-width: 400px;
+    margin: 1rem;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid rgba(0, 255, 0, 0.2);
+}
+
+
+.skillTarg {
+    padding: 1.5rem;
+    margin: 1.5rem 0; 
+    border: 1px solid #00FF00;
+    color: #00FF00;
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 280px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+}
+
+
+.barra {
+    width: 100%;
+    background: #333;
+    border: 1px solid #00FF00;
+    height: 20px;
+    margin: 15px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.prog {
+    background: #00FF00;
+    height: 100%;
+    transition: width 1s ease;
+    box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00;
+}
+
+
+.skillNivell {
+    color: #00FF00;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+button {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: 2px solid #00FF00;
+    background-color: #00FF00;
+    color: black;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: black;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+}
+
