@@ -38,3 +38,29 @@ body {
     background-color: black;
     color: #00FF00;
 }
+#navbar {
+    display: none;
+    background-color: #333;
+    color: #00FF00;
+    padding: 1rem;
+    text-align: center;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#navbar a {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+#navbar a:hover {
+    color: white;
+}

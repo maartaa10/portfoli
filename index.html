@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marta Rodrigo Portfoli</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styles.css">
    
 </head>
 <body>
@@ -30,6 +30,14 @@
         <p id="resu">  </p>
         <button id="començaBt" style="display: none;" onclick="començaEscapeRoom()">Començar</button>
     </section>
-
+    <div id="principal" style="display: none;">
+        <section id="sobreMi" class="seccioCont" style="display: block;">
+            <h2>Sobre Mi</h2>
+            <p>Resol aquesta endevinalla: Quants mesos de l'any tenen 28 dies?</p>
+            <input type="text" id="codiSM" placeholder="Introdueix el codi">
+            <button onclick="comprovaCodiSM()">Seguent</button>
+        </section>
+    </div>
+    <script src="./js/script.js"></script>
 </body>
 </html>

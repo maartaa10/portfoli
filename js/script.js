@@ -45,3 +45,29 @@ function començaEscapeRoom() {
     document.getElementById('principal').style.display = 'block';
     mostraSobreMi();
 }
+function mostraSobreMi() {
+    document.getElementById('sobreMi').style.display = 'block';
+    document.getElementById('projectes').style.display = 'none';
+    document.getElementById('skills').style.display = 'none';
+    document.getElementById('contacte').style.display = 'none';
+}
+function comprovaCodiSM() {
+    const codi = document.getElementById('codiSM').value.trim().toLowerCase();
+    if (codi === "12") {  
+        document.getElementById('sobreMi').innerHTML = `
+            <h2>Sobre Mi</h2>
+            <p>¡Hola! Em dic Marta Rodrigo, soc estudiant d’últim any de Desenvolupament
+            d'Aplicacions Web (DAW) amb una gran passió per la
+            ciberseguretat. <br> He completat diversos cursos en línia
+            sobre hacking, pentesting i criptografia, i estic
+            desitjant aplicar els meus coneixements en el món real.  <br> Aprenc ràpidament i soc una persona proactiva,
+            a qui li agraden els reptes i les noves experiències.  <br>
+            Tinc una mentalitat creativa i analítica que em permet
+            resoldre problemes i innovar solucions.</p>
+            <button onclick="mostraProjectes()">Seguent Repte!</button>
+        `;
+    } else {
+        alert('ERROR: CODI INCORRECTE. Torna-ho a provar.');
+    }
+}
+
