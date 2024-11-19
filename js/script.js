@@ -1,3 +1,22 @@
+let modoEscapeRoom = true;
+const enllaç = document.querySelectorAll('#navbar a');
+
+for (let i = 0; i < enllaç.length; i++) {
+    enllaç[i].addEventListener('click', function(event) {
+        event.preventDefault();
+        const idSeccio = this.getAttribute('href').substring(1);
+        
+        
+        const seccions = document.querySelectorAll('.seccioCont');
+        for (let j = 0; j < seccions.length; j++) {
+            seccions[j].style.display = 'none';
+        }
+
+       
+        document.getElementById(idSeccio).style.display = 'block';
+    });
+}
+
 function mostraInstruccions() {
     document.getElementById('benvi').style.display = 'none';
     document.getElementById('instruccions').style.display = 'block';
@@ -235,7 +254,11 @@ function reiniciarEscapeRoom() {
     document.getElementById('navbar').style.display = 'none'; 
 }
 function mostrarNavbar() {
+    modoEscapeRoom = false;
     document.getElementById('navbar').style.display = 'block'; 
+    document.querySelectorAll('.seccioCont').forEach(seccio => {
+        seccio.style.display = 'none'; 
+    });
 }
 
 function recarregaPag() {
@@ -244,12 +267,28 @@ function recarregaPag() {
 
 
 function navegarSeccions() {
- 
-    document.getElementById('navbar').style.display = 'block';
-    document.getElementById('finalButtons').style.display = 'none'; 
-
-   
-    document.getElementById('contacte').style.display = 'none';
+    mostrarNavbar();
+    document.getElementById('finalButtons').style.display = 'none';
+    document.querySelectorAll('button').forEach(boto => {
+        if (boto.textContent === 'Reiniciar Escape Room' || boto.textContent === 'Navegar Seccions') {
+            boto.style.display = 'inline-block';
+        } else {
+            boto.style.display = 'none'; 
+        }
+        actualitzaBotons(); 
+    });
+}
+function actualitzaBotons() {
+    if (!modoEscapeRoom) {
+        document.querySelectorAll('button').forEach(boto => {
+          
+            if (!boto.classList.contains('enviaBt')) {
+                boto.style.display = 'none';
+            } else {
+                boto.style.display = 'inline-block'; 
+            }
+        });
+    }
 }
 
 
