@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+<audio id="musica" src="./img/musica.mp3" preload="auto"></audio>
+
 
 </head>
 <body>
@@ -25,6 +27,12 @@
         <div id="rellotg"></div>
         <div id="nom">Marta Rodrigo</div>
     </header>
+    <audio id="musica" src="musica.mp3" preload="auto"></audio>
+
+    
+    <div id="musicIndicator" style="display: none; color: green; font-size: 18px;">
+        La musica esta sonant
+    </div>
     <section id="benvi">
         <h1>Benvingut</h1>
         <button onclick="mostraInstruccions()">Comença</button>
