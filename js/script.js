@@ -332,7 +332,7 @@ function mostrarMapa() {
         .openPopup();
 
     L.marker([34.0522, -118.2437]).addTo(mapa)  
-        .bindPopup("<strong>Apple</strong><br>Enginyer de Software<br>2018-2022<br>Desenvolupament de sistemes de seguretat")
+        .bindPopup("<strong>Apple</strong><br>Enginyera de Software<br>2018-2022<br>Desenvolupament de sistemes de seguretat")
         .openPopup();
 }
 function dataFooter() {
