@@ -6,6 +6,10 @@
     <title>Marta Rodrigo Portfoli</title>
     <link rel="stylesheet" href="./css/styles.css">
    
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
 </head>
 <body>
     <header>
@@ -14,6 +18,7 @@
                 <li><a href="#sobreMi">Sobre Mi</a></li>
                 <li><a href="#projectes">Projectes</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#experiencia">Experiencia</a></li> 
                 <li><a href="#contacte">Contacte</a></li>
             </ul>
         </nav>
@@ -53,6 +58,16 @@
         <button onclick="comprovaSkills()">Seguent</button>
         <div id="skillsTot"></div>
     </section>
+    <section id="experiencia" class="seccioCont" style="display: none;">
+        <h2>Experiencia</h2>
+        <p>Resol aquesta endevinalla: Sóc primer quan sóc tercer, però no sóc segon mai. Què sóc?</p>
+        <input type="text" id="codiExperiencia" placeholder="Introdueix el codi">
+        <button id="btnExperiencia" onclick="comprovaCodiExperiencia()">Seguent</button>
+        <div id="mapa" style="height: 400px; display: none;"></div> 
+        <div id="detallsExperiencia" style="display: none;"></div>
+        <button id="contacteBtn" style="display: none;" onclick="mostraContacte()">Següent</button> 
+    </section>
+    
     <section id="contacte" class="seccioCont">
         <h2>Contacte</h2>
         <div id="acertijoContacte">

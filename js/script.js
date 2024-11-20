@@ -5,14 +5,12 @@ for (let i = 0; i < enllaç.length; i++) {
     enllaç[i].addEventListener('click', function(event) {
         event.preventDefault();
         const idSeccio = this.getAttribute('href').substring(1);
-        
-        
+
         const seccions = document.querySelectorAll('.seccioCont');
         for (let j = 0; j < seccions.length; j++) {
             seccions[j].style.display = 'none';
         }
 
-       
         document.getElementById(idSeccio).style.display = 'block';
     });
 }
@@ -201,14 +199,20 @@ function comprovaSkills() {
                     </div>
                 </div>
             </div>
-            <button onclick="mostraContacte()" class="btSeg">Seguent</button>
+            <button onclick="mostraExperiencia()">Següent</button>  <!-- Cambio aquí -->
         `;
     } else {
         alert('ERROR: CODI INCORRECTE \n\nTorna-ho a provar..');
     }
 }
+
+function mostraExperiencia() {
+    document.getElementById('skills').style.display = 'none';  
+    document.getElementById('experiencia').style.display = 'block';  
+}
+
 function mostraContacte() {
-    document.getElementById('skills').style.display = 'none';
+    document.getElementById('experiencia').style.display = 'none';
     document.getElementById('contacte').style.display = 'block';
 }
 function comprovaCodiContacte() {
@@ -290,15 +294,47 @@ function actualitzaBotons() {
         });
     }
 }
+function comprovaCodiExperiencia() {
+    const codi = document.getElementById('codiExperiencia').value.trim();
+    if (codi === "3") { 
+        ocultaEndevinalla(); 
+        mostrarMapa(); 
+    } else {
+        alert('ERROR: CODI INCORRECTE. Torna-ho a provar.');
+    }
+}
 
+function ocultaEndevinalla() {
+  
+    document.querySelector('section#experiencia p').style.display = 'none'; 
+    document.getElementById('codiExperiencia').style.display = 'none'; 
+    document.getElementById('btnExperiencia').style.display = 'none'; 
+}
 
+function mostrarMapa() {
+   
+    document.getElementById('mapa').style.display = 'block'; 
+    document.getElementById('contacteBtn').style.display = 'inline-block';
+    
+   
+    const mapa = L.map('mapa').setView([51.505, -0.09], 2);  
+    
+   
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(mapa);
 
+    
+    L.marker([51.505, -0.09]).addTo(mapa)  
+        .bindPopup("<strong>Google</strong><br>Hacker Étic<br>2010-2018<br>Vaig mitigar mes de 1000 vulnerabilitats en aplicacions")
+        .openPopup();
 
+    L.marker([40.7128, -74.0060]).addTo(mapa)  
+        .bindPopup("<strong>MIT</strong><br>Especialista en Ciberseguretat<br>2015-2020<br>Auditoría de xarxes i sistemes")
+        .openPopup();
 
-
-
-
-
+    L.marker([34.0522, -118.2437]).addTo(mapa)  
+        .bindPopup("<strong>Apple</strong><br>Enginyer de Software<br>2018-2022<br>Desenvolupament de sistemes de seguretat")
+        .openPopup();
+}
 function dataFooter() {
     const ara = new Date();
     

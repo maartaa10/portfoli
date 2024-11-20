@@ -223,6 +223,11 @@ textarea {
     background-color: #33ff33;
     transition: background-color 0.3s ease;
 }
+#mapa {
+    height: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
 
 footer {
     position:relative;
