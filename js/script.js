@@ -24,7 +24,7 @@ function mostraInstruccions() {
     let i = 0;
     const musica = document.getElementById('musica');
     musica.play(); 
-    document.getElementById('musicIndicator').style.display = 'block'; 
+   
     function maquinaEscriure() {
         if (i < str.length) {
            
