@@ -30,7 +30,7 @@
     <audio id="musica" src="musica.mp3" preload="auto"></audio>
 
     
-
+<div id="content">
     <section id="benvi">
         <h1>Benvingut</h1>
         <button onclick="mostraInstruccions()">Comença</button>
@@ -66,6 +66,7 @@
     </section>
     <section id="experiencia" class="seccioCont" style="display: none;">
         <h2>Experiencia</h2>
+        <p id="descripcioExperiencia" style="display: none;">Comptant amb més de 20 anys d'experiència com a hacker ètica i desenvolupadora full stack, m'agrada escriure codi net i optimitzat. Em baso en la regla del Boy Scout: "Deixa-ho tot una mica millor del que ho has trobat". Aquesta filosofia m'impulsa a millorar contínuament el codi i les solucions que implemento, sempre amb la vista posada en l'eficiència i la seguretat.</p>
         <p>Resol aquesta endevinalla: Sóc primer quan sóc tercer, però no sóc segon mai. Què sóc?</p>
         <input type="text" id="codiExperiencia" placeholder="Introdueix el codi">
         <button id="btnExperiencia" onclick="comprovaCodiExperiencia()">Seguent</button>
@@ -73,6 +74,9 @@
         <div id="detallsExperiencia" style="display: none;"></div>
         <button id="contacteBtn" style="display: none;" onclick="mostraContacte()">Següent</button> 
     </section>
+    
+    
+    
     
     <section id="contacte" class="seccioCont">
         <h2>Contacte</h2>
@@ -101,12 +105,12 @@
     
     <section id="gracies" class="seccioCont" style="display: none;">
         <div id="finalButtons">
-            <p>Gràcies per jugar! Has desbloquejat totes les seccions. Pots navegar lliurement o reiniciar el joc.</p>
-            <button onclick="reiniciarEscapeRoom()">Reiniciar Escape Room</button>
+            <p>Gràcies per jugar! Has desbloquejat totes les seccions. Pots navegar lliurement.</p>
+          <!--  <button onclick="reiniciarEscapeRoom()">Reiniciar Escape Room</button>-->
             <button onclick="navegarSeccions()">Navegar Seccions</button>
         </div>
     </section>
-
+</div>
     <footer>
         <p id="dataInfo"></p>
         <p>&copy; 2024 - Marta Rodrigo</p>
