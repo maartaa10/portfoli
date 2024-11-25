@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Com s'ha fet</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <header>
+        <nav id="navbar" style="display:none;"> 
+            <ul>
+                <li><a href="#sobreMi">Sobre Mi</a></li>
+                <li><a href="#projectes">Projectes</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experiencia">Experiencia</a></li> 
+                <li><a href="#contacte">Contacte</a></li>
+            </ul>
+        </nav>
+        <div id="rellotg"></div>
+        <div id="nom">Marta Rodrigo</div>
+    </header>
+    <audio id="musica" src="musica.mp3" preload="auto"></audio>
+
+    <!-- Secció principal "Com s'ha fet" -->
+     <div id="content">
+    <section id="com-sha-fet" class="section-content">
+        <h1>Com s'ha fet</h1>
+        <p>Aquesta pàgina s'ha creat amb una estructura HTML senzilla i funcional, amb l'objectiu de presentar el portafoli en forma d'un Escape Room interactiu i amb una estètica inspirada en Matrix.</p>
+
+        <div class="projecte">
+            <h2>Estructura HTML</h2>
+            <p>He organitzat el codi HTML en seccions clares i diferenciades per facilitar la navegació i la comprensió:</p>
+            <ul>
+                <li><strong>Encapçalament:</strong> Inclou el nom i el rellotge, creat amb JavaScript, per afegir un toc de dinamisme a la pàgina.</li>
+                <li><strong>Seccions:</strong> Cada pàgina està dividida en seccions que s'auto-oculten o es desbloquegen en resoldre cada enigma. Això es fa amb una combinació de classes CSS i JavaScript.</li>
+                <li><strong>Footer:</strong> Un footer simple amb enllaços a les xarxes socials i a la pàgina d'inici, en coherència amb el disseny Matrix.</li>
+            </ul>
+        </div>
+
+        <div class="projecte">
+            <h2>Estil Matrix amb CSS</h2>
+            <p>Per aconseguir l’estètica Matrix, he aplicat diversos elements visuals amb CSS:</p>
+            <ul>
+                <li><strong>Colors:</strong> Fons negre amb text verd (#00FF00) per simular la pantalla de codi de Matrix.</li>
+                <li><strong>Tipografia:</strong> He utilitzat una font monoespai, 'Courier New', per donar l’aparença de codi.</li>
+                <li><strong>Animacions:</strong> Hi ha un efecte de "màquina d'escriure" en el text de les instruccions i un efecte hover per als botons. També s'usa una animació per fer aparèixer el rellotge.</li>
+                <li><strong>Classes específiques:</strong> He creat classes CSS com <code>.section-content</code> per estilitzar cada secció de manera consistent i amb un toc de misteri.</li>
+            </ul>
+        </div>
+
+        <div class="projecte">
+            <h2>Funcionalitat amb JavaScript</h2>
+            <p>He utilitzat JavaScript per afegir interactivitat i fer que l'experiència sigui més immersiva:</p>
+            <ul>
+                <li><strong>Rellotge:</strong> Un script de JavaScript actualitza l'hora en temps real a l'encapçalament. Utilitza la funció <code>setInterval()</code> per refrescar cada segon i mantenir l’usuari immers en l'ambient.</li>
+                <li><strong>Enigmes:</strong> He creat funcions que generen enigmes amb condicions que l'usuari ha de resoldre per desbloquejar cada secció.</li>
+                <li><strong>Efecte de "màquina d'escriure":</strong> Amb un bucle que recorre cada lletra de les instruccions, el text apareix gradualment, donant una sensació de misteri.</li>
+                <li><strong>Control de seccions:</strong> Quan l'usuari resol correctament un enigma, es canvien les classes CSS de les seccions per mostrar-les o amagar-les segons calgui.</li>
+            </ul>
+        </div>
+
+        <div class="projecte">
+            <h2>Enigmes i Interactivitat</h2>
+            <p>Els enigmes estan dissenyats per ser senzills però entretinguts, creant una experiència interactiva per a l’usuari:</p>
+            <ul>
+                <li>Enigma de "Sobre Mi": Cal respondre quants mesos tenen 28 dies.</li>
+                <li>Enigma de "Projectes": Es demana convertir '0011' de binari a decimal.</li>
+                <li>Enigma de "Skills": Cal calcular el nombre de segons en una hora.</li>
+                <li>Enigma de "Experiencia": Cal endevinar quin numero es descriu.</li>
+                <li>Enigma de "Contacte": Cal resoldre quin numero es l'unic igual a la suma de les seves xifres.</li>
+            </ul>
+        </div>
+
+       
+    </section>
+</div>
+    <footer>
+        <p id="dataInfo"></p>
+        <p>&copy; 2024 - Marta Rodrigo</p>
+        <p>
+            <a href="https://github.com/maartaa10" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/martar13" target="_blank">Linkedin</a> |
+            <a href="index.html">Inici</a>
+            
+        </p>
+    </footer>
+
+  
+<script src="./js/script.js"></script>
+</body>
+</html>

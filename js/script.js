@@ -185,6 +185,13 @@ function comprovaSkills() {
                         </div>
                         <p class="skillNivell">Nivell: Profesional</p>
                     </div>
+                     <div class="skillTarg">
+                        <h4>Italià</h4>
+                        <div class="barra">
+                            <div class="prog" style="width: 20%;"></div>
+                        </div>
+                        <p class="skillNivell">Nivell: Basic</p>
+                    </div>
                     <div class="skillTarg">
                         <h4>Español</h4>
                         <div class="barra">
@@ -201,7 +208,7 @@ function comprovaSkills() {
                     </div>
                 </div>
             </div>
-            <button onclick="mostraExperiencia()">Següent</button>  <!-- Cambio aquí -->
+            <button onclick="mostraExperiencia()">Següent</button> 
         `;
     } else {
         alert('ERROR: CODI INCORRECTE \n\nTorna-ho a provar..');
@@ -318,24 +325,24 @@ function actualitzaBotons() {
 function comprovaCodiExperiencia() {
     const codi = document.getElementById('codiExperiencia').value.trim();
     if (codi === "3") { 
-        ocultaEndevinalla(); // Amaga la pregunta i el codi
-        mostrarDescripcioExperiencia(); // Mostra la descripció de l'experiència
-        mostrarMapa();  // Mostra el mapa, si cal
+        ocultaEndevinalla(); 
+        mostrarDescripcioExperiencia(); 
+        mostrarMapa(); 
     } else {
         alert('ERROR: CODI INCORRECTE. Torna-ho a provar.');
     }
 }
 
 function mostrarDescripcioExperiencia() {
-    document.getElementById('descripcioExperiencia').style.display = 'block'; // Mostra el text de l'experiència
+    document.getElementById('descripcioExperiencia').style.display = 'block'; 
 }
 
 
 function ocultaEndevinalla() {
-    document.getElementById('descripcioExperiencia').style.display = 'block'; // Mostra la descripció de l'experiència
-    document.getElementById('codiExperiencia').style.display = 'none'; // Amaga el camp de codi
-    document.getElementById('btnExperiencia').style.display = 'none'; // Amaga el botó de "Següent"
-    document.querySelector('section#experiencia p:nth-of-type(2)').style.display = 'none'; // Amaga l'endevinalla
+    document.getElementById('descripcioExperiencia').style.display = 'block';
+    document.getElementById('codiExperiencia').style.display = 'none';
+    document.getElementById('btnExperiencia').style.display = 'none';
+    document.querySelector('section#experiencia p:nth-of-type(2)').style.display = 'none'; 
 }
 
 
