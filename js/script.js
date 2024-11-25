@@ -179,9 +179,9 @@ function comprovaSkills() {
                 <div class="skillsColumn">
                     <h3>Idiomas</h3>
                     <div class="skillTarg">
-                        <h4>Inglés</h4>
+                        <h4>Anglés</h4>
                         <div class="barra">
-                            <div class="prog" style="width: 90%;"></div>
+                            <div class="prog" style="width: 70%;"></div>
                         </div>
                         <p class="skillNivell">Nivell: Profesional</p>
                     </div>
@@ -202,7 +202,7 @@ function comprovaSkills() {
                     <div class="skillTarg">
                         <h4>Catala</h4>
                         <div class="barra">
-                            <div class="prog" style="width: 80%;"></div>
+                            <div class="prog" style="width: 100%;"></div>
                         </div>
                         <p class="skillNivell">Nivell: Natiu</p>
                     </div>
