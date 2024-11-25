@@ -248,9 +248,10 @@ function contacte(event) {
     document.getElementById('gracies').style.display = 'block';
 }
 
-function reiniciarEscapeRoom() {
+/*function reiniciarEscapeRoom() {
+    // Oculta las secciones y reinicia los elementos visuales
     document.getElementById('finalButtons').style.display = 'none';
-    document.getElementById('benvi').style.display = 'flex';  
+    document.getElementById('benvi').style.display = 'flex';
     document.getElementById('instruccions').style.display = 'none';
     document.getElementById('principal').style.display = 'none';
     document.getElementById('sobreMi').style.display = 'none';
@@ -258,7 +259,25 @@ function reiniciarEscapeRoom() {
     document.getElementById('skills').style.display = 'none';
     document.getElementById('contacte').style.display = 'none';
     document.getElementById('navbar').style.display = 'none'; 
-}
+    
+    // Reestablece los campos de entrada de los acertijos
+    document.getElementById('codiSM').value = '';
+    document.getElementById('codiP').value = '';
+    document.getElementById('codiS').value = '';
+    document.getElementById('codiExperiencia').value = '';
+    document.getElementById('codiContacte').value = '';
+    
+    // Asegúrate de que los botones de reinicio y navegación se muestren adecuadamente
+    document.querySelectorAll('button').forEach(boto => {
+        if (boto.textContent === 'Reiniciar Escape Room' || boto.textContent === 'Navegar Seccions') {
+            boto.style.display = 'inline-block';
+        } else {
+            boto.style.display = 'none';
+        }
+    });
+}*/
+
+
 function mostrarNavbar() {
     modoEscapeRoom = false;
     document.getElementById('navbar').style.display = 'block'; 
@@ -299,19 +318,27 @@ function actualitzaBotons() {
 function comprovaCodiExperiencia() {
     const codi = document.getElementById('codiExperiencia').value.trim();
     if (codi === "3") { 
-        ocultaEndevinalla(); 
-        mostrarMapa(); 
+        ocultaEndevinalla(); // Amaga la pregunta i el codi
+        mostrarDescripcioExperiencia(); // Mostra la descripció de l'experiència
+        mostrarMapa();  // Mostra el mapa, si cal
     } else {
         alert('ERROR: CODI INCORRECTE. Torna-ho a provar.');
     }
 }
 
-function ocultaEndevinalla() {
-  
-    document.querySelector('section#experiencia p').style.display = 'none'; 
-    document.getElementById('codiExperiencia').style.display = 'none'; 
-    document.getElementById('btnExperiencia').style.display = 'none'; 
+function mostrarDescripcioExperiencia() {
+    document.getElementById('descripcioExperiencia').style.display = 'block'; // Mostra el text de l'experiència
 }
+
+
+function ocultaEndevinalla() {
+    document.getElementById('descripcioExperiencia').style.display = 'block'; // Mostra la descripció de l'experiència
+    document.getElementById('codiExperiencia').style.display = 'none'; // Amaga el camp de codi
+    document.getElementById('btnExperiencia').style.display = 'none'; // Amaga el botó de "Següent"
+    document.querySelector('section#experiencia p:nth-of-type(2)').style.display = 'none'; // Amaga l'endevinalla
+}
+
+
 
 function mostrarMapa() {
    
