@@ -1,3 +1,5 @@
+
+/*------------------------------- GENERAL-------------------------------*/
 let modoEscapeRoom = true;
 const enllaç = document.querySelectorAll('#navbar a');
 
@@ -14,7 +16,12 @@ for (let i = 0; i < enllaç.length; i++) {
         document.getElementById(idSeccio).style.display = 'block';
     });
 }
-
+function començaEscapeRoom() {
+    document.getElementById('instruccions').style.display = 'none';
+    document.getElementById('principal').style.display = 'block';
+    mostraSobreMi();
+}
+/*------------------------------- SECCIÓ: Instruccions-------------------------------*/
 function mostraInstruccions() {
     document.getElementById('benvi').style.display = 'none';
     document.getElementById('instruccions').style.display = 'block';
@@ -42,7 +49,7 @@ function mostraInstruccions() {
 
     maquinaEscriure(); 
 }
-
+/*------------------------------- SECCIÓ: header-------------------------------*/
 function mostraRellotge() {
     const ara = new Date();
     const hores = ara.getHours();
@@ -59,11 +66,7 @@ function mostraRellotge() {
 
 setInterval(mostraRellotge, 1000);
 
-function començaEscapeRoom() {
-    document.getElementById('instruccions').style.display = 'none';
-    document.getElementById('principal').style.display = 'block';
-    mostraSobreMi();
-}
+/*------------------------------- SECCIÓ: SObre Mi-------------------------------*/
 function mostraSobreMi() {
     document.getElementById('sobreMi').style.display = 'block';
     document.getElementById('projectes').style.display = 'none';
@@ -74,21 +77,26 @@ function comprovaCodiSM() {
     const codi = document.getElementById('codiSM').value.trim().toLowerCase();
     if (codi === "12") {  
         document.getElementById('sobreMi').innerHTML = `
-            <h2>Sobre Mi</h2>
-            <p>¡Hola! Em dic Marta Rodrigo, soc estudiant d’últim any de Desenvolupament
-            d'Aplicacions Web (DAW) amb una gran passió per la
-            ciberseguretat. <br> He completat diversos cursos en línia
-            sobre hacking, pentesting i criptografia, i estic
-            desitjant aplicar els meus coneixements en el món real.  <br> Aprenc ràpidament i soc una persona proactiva,
-            a qui li agraden els reptes i les noves experiències.  <br>
-            Tinc una mentalitat creativa i analítica que em permet
-            resoldre problemes i innovar solucions.</p>
-            <button onclick="mostraProjectes()">Seguent Repte!</button>
-        `;
+    <h2>Sobre Mi</h2>
+    <p>Hola! Em dic Marta Rodrigo, soc estudiant d'últim any de Desenvolupament d'Aplicacions Web (DAW) amb una gran passió per la ciberseguretat.<br> 
+    He completat diversos cursos en línia sobre hacking, pentesting i criptografia, i estic desitjant aplicar els meus coneixements en el món real.<br>  
+    Aprenc ràpidament i soc una persona proactiva, a qui li agraden els reptes i les noves experiències.<br>  
+    Tinc una mentalitat creativa i analítica que em permet resoldre problemes i innovar solucions.<br><br>
+
+    El meu interès per la ciberseguretat va començar quan tenia uns 9-10 anys, quan vaig descobrir Jumpstart, una eina que permetia explorar les vulnerabilitats del sistema Wi-Fi WEP. <br>
+    Aquest sistema de seguretat, que era força comú a l'època, utilitzava una clau fixa i poc segura que es podia desxifrar fàcilment (per això va ser substituït per WPA i WPA2). <br> 
+    Amb aquella eina vaig "hackejar" la contrasenya del WiFi d'un veí, i tot i que la meva acció no era ètica (i no ho recomano), va ser amb aquesta experiència quan em vaig quedar fascinada pel potencial de la ciberseguretat i, des de llavors, no he deixat d’aprendre'n més. Estic emocionada de seguir explorant aquest camp, aplicar el que sé i afrontar els nous reptes que sorgeixen cada dia.</p>
+    
+    <img src="./img/sobremi.jpeg" alt="" style="max-width: 50%; height: auto;"/>
+    <br>
+    <button onclick="mostraProjectes()">Seguent Repte!</button>
+`;
+
     } else {
         alert('ERROR: CODI INCORRECTE. Torna-ho a provar.');
     }
 }
+/*------------------------------- SECCIÓ: Projectes-------------------------------*/
 function mostraProjectes() {
  
     document.getElementById('sobreMi').style.display = 'none';
@@ -130,6 +138,7 @@ function comprovaCodiP() {
 
 }
 
+/*------------------------------- SECCIÓ: Skills-------------------------------*/
 function mostraSkills() {
  
     document.getElementById('projectes').style.display = 'none';
@@ -177,7 +186,7 @@ function comprovaSkills() {
                 
                 
                 <div class="skillsColumn">
-                    <h3>Idiomas</h3>
+                    <h3>Idiomes</h3>
                     <div class="skillTarg">
                         <h4>Anglés</h4>
                         <div class="barra">
@@ -214,117 +223,16 @@ function comprovaSkills() {
         alert('ERROR: CODI INCORRECTE \n\nTorna-ho a provar..');
     }
 }
+/*------------------------------- SECCIÓ: EXperiencia-------------------------------*/
 
 function mostraExperiencia() {
     document.getElementById('skills').style.display = 'none';  
     document.getElementById('experiencia').style.display = 'block';  
 }
 
-function mostraContacte() {
-    document.getElementById('experiencia').style.display = 'none';
-    document.getElementById('contacte').style.display = 'block';
-}
-function comprovaCodiContacte() {
-    const codi = document.getElementById('codiContacte').value.trim();
-    if (codi === "9") { 
-        document.getElementById('acertijoContacte').style.display = 'none'; 
-        document.getElementById('contacteForm').style.display = 'block'; 
-    } else {
-        alert('ERROR: CODI INCORRECTE. Torna-ho a provar.');
-    }
-}
-function mostraGracies() {
-    document.getElementById('gracies').style.display = 'block';
-    document.getElementById('contacte').style.display = 'none'; 
-    document.getElementById('skills').style.display = 'none';
-    document.getElementById('projectes').style.display = 'none';
-    document.getElementById('sobreMi').style.display = 'none'; 
-    document.querySelectorAll('button').forEach(boto => {
-        if (boto.textContent !== 'Reiniciar Escape Room' && boto.textContent !== 'Navegar Seccions') {
-            boto.style.display = 'none'; 
-        }
-    });
-}
-
-function contacte(event) {
-    event.preventDefault(); 
-
-    document.getElementById('contacte').style.display = 'none';
-
-    
-    document.getElementById('gracies').style.display = 'block';
-}
-
-/*function reiniciarEscapeRoom() {
-    // Oculta las secciones y reinicia los elementos visuales
-    document.getElementById('finalButtons').style.display = 'none';
-    document.getElementById('benvi').style.display = 'flex';
-    document.getElementById('instruccions').style.display = 'none';
-    document.getElementById('principal').style.display = 'none';
-    document.getElementById('sobreMi').style.display = 'none';
-    document.getElementById('projectes').style.display = 'none';
-    document.getElementById('skills').style.display = 'none';
-    document.getElementById('contacte').style.display = 'none';
-    document.getElementById('navbar').style.display = 'none'; 
-    
-    // Reestablece los campos de entrada de los acertijos
-    document.getElementById('codiSM').value = '';
-    document.getElementById('codiP').value = '';
-    document.getElementById('codiS').value = '';
-    document.getElementById('codiExperiencia').value = '';
-    document.getElementById('codiContacte').value = '';
-    
-    // Asegúrate de que los botones de reinicio y navegación se muestren adecuadamente
-    document.querySelectorAll('button').forEach(boto => {
-        if (boto.textContent === 'Reiniciar Escape Room' || boto.textContent === 'Navegar Seccions') {
-            boto.style.display = 'inline-block';
-        } else {
-            boto.style.display = 'none';
-        }
-    });
-}*/
-
-
-function mostrarNavbar() {
-    modoEscapeRoom = false;
-    document.getElementById('navbar').style.display = 'block'; 
-    document.querySelectorAll('.seccioCont').forEach(seccio => {
-        seccio.style.display = 'none'; 
-    });
-}
-
-function recarregaPag() {
-    location.reload();
-}
-
-
-function navegarSeccions() {
-    mostrarNavbar();
-    document.getElementById('finalButtons').style.display = 'none';
-    document.querySelectorAll('button').forEach(boto => {
-        if (boto.textContent === 'Reiniciar Escape Room' || boto.textContent === 'Navegar Seccions') {
-            boto.style.display = 'inline-block';
-        } else {
-            boto.style.display = 'none'; 
-        }
-        actualitzaBotons(); 
-    });
-}
-function actualitzaBotons() {
-    if (!modoEscapeRoom) {
-        document.querySelectorAll('button').forEach(boto => {
-          
-            if (!boto.classList.contains('enviaBt')) {
-                boto.style.display = 'none';
-            } else {
-                boto.style.display = 'inline-block'; 
-            }
-        });
-    }
-}
 function comprovaCodiExperiencia() {
     const codi = document.getElementById('codiExperiencia').value.trim();
-    if (codi === "3") { 
+    if (codi === "3") {
         ocultaEndevinalla(); 
         mostrarDescripcioExperiencia(); 
         mostrarMapa(); 
@@ -332,6 +240,7 @@ function comprovaCodiExperiencia() {
         alert('ERROR: CODI INCORRECTE. Torna-ho a provar.');
     }
 }
+
 
 function mostrarDescripcioExperiencia() {
     document.getElementById('descripcioExperiencia').style.display = 'block'; 
@@ -371,6 +280,266 @@ function mostrarMapa() {
         .bindPopup("<strong>Apple</strong><br>Enginyera de Software<br>2018-2022<br>Desenvolupament de sistemes de seguretat")
         .openPopup();
 }
+
+/*------------------------------- SECCIÓ: Contacte-------------------------------*/
+function mostraContacte() {
+    document.getElementById('educacio').style.display = 'none'; 
+    document.getElementById('contacte').style.display = 'block';  
+}
+
+function comprovaCodiContacte() {
+    const codi = document.getElementById('codiContacte').value.trim();
+    if (codi === "9") { 
+        document.getElementById('acertijoContacte').style.display = 'none'; 
+        document.getElementById('contacteForm').style.display = 'block'; 
+    } else {
+        alert('ERROR: CODI INCORRECTE. Torna-ho a provar.');
+    }
+}
+
+function contacte(event) {
+    event.preventDefault(); 
+
+    document.getElementById('contacte').style.display = 'none';
+
+    
+    document.getElementById('gracies').style.display = 'block';
+}
+
+
+/*------------------------------- SECCIÓ: Final escape room-------------------------------*/
+function mostraGracies() {
+    document.getElementById('gracies').style.display = 'block';
+    document.getElementById('contacte').style.display = 'none'; 
+    document.getElementById('skills').style.display = 'none';
+    document.getElementById('projectes').style.display = 'none';
+    document.getElementById('sobreMi').style.display = 'none'; 
+    document.querySelectorAll('button').forEach(boto => {
+        if (boto.textContent !== 'Reiniciar Escape Room' && boto.textContent !== 'Navegar Seccions') {
+            boto.style.display = 'none'; 
+        }
+    });
+}
+
+
+function mostrarNavbar() {
+    modoEscapeRoom = false;
+    document.getElementById('navbar').style.display = 'block'; 
+    document.querySelectorAll('.seccioCont').forEach(seccio => {
+        seccio.style.display = 'none'; 
+    });
+}
+
+function recarregaPag() {
+    location.reload();
+}
+
+
+function navegarSeccions() {
+    mostrarNavbar();
+    document.getElementById('finalButtons').style.display = 'none';
+    document.querySelectorAll('button').forEach(boto => {
+        if (boto.textContent === 'Reiniciar Escape Room' || boto.textContent === 'Navegar Seccions') {
+            boto.style.display = 'inline-block';
+        } else {
+            boto.style.display = 'none'; 
+        }
+        actualitzaBotons(); 
+    });
+}
+function actualitzaBotons() {
+    if (!modoEscapeRoom) {
+        document.querySelectorAll('button').forEach(boto => {
+          
+            if (!boto.classList.contains('enviaBt')) {
+                boto.style.display = 'none';
+            } else {
+                boto.style.display = 'inline-block'; 
+            }
+        });
+    }
+}
+/*------------------------------- SECCIÓ: Educacio-------------------------------*/
+function mostraEducacio() {
+    document.getElementById('experiencia').style.display = 'none'; 
+    document.getElementById('educacio').style.display = 'block';  
+}
+
+function comprovaCodiEducacio() {
+    const codi = document.getElementById('codiEducacio').value.trim();
+    if (codi.toLowerCase() === "una clau mestra") { 
+        document.getElementById('acertijoEducacio').style.display = 'none';
+        document.getElementById('codiEducacio').style.display = 'none';
+        document.getElementById('btnEducacio').style.display = 'none';
+        document.getElementById('contingutEducacio').style.display = 'block';
+        document.getElementById('contacteBtnEducacio').style.display = 'inline-block';  
+    } else {
+        alert('ERROR: CÒDIG INCORRECTE. Torna-ho a provar.');
+    }
+}
+
+function educacio() {
+    const educacio = {
+        batxillerat: {
+            nom: "Batxillerat Humanístic",
+            centre: "Institut Carles Vallbona",
+            data: "2020-2022",
+            descripcio: "Vaig estudiar el batxillerat humanistic. Vaig explorar assignatures com literatura, història, filosofia i vaig desenvolupar habilitats de pensament crític.",
+            detalls: "Vaig estudiar italià com a assignatura optativa, obtenint un nivell A1-A2.",
+            imatge: "./img/batxi.jpeg"
+        },
+        fp: {
+            nom: "Formació Professional en Desenvolupament d'Aplicacions Web (DAW)",
+            centre: "Institut Carles Vallbona",
+            data: "2023-2025",
+            descripcio: "Fins ara, he adquirit coneixements en SQL, Java (Java bàsic, OOP, Swing i DAO), Administració de Sistemes (Linux, Ubuntu Server, Windows, etc.), Bash Scripting, HTML, CSS, gestió de WordPress, GIT bàsic i control de versions, i PostgreSQL.",
+            detalls: "Després de guanyar el concurs de programació 'Pica-Tecles' al meu institut, els meus dos companys i jo vam ser seleccionats per competir al concurs regional 'Programa-me' celebrat a Olot. La competició consistia a resoldre tants problemes com fos possible dins d'un temps determinat. Tot i que no vam aconseguir el primer lloc, va ser una experiència enriquidora que em va permetre desenvolupar habilitats de treball en equip i rendir sota pressió.",
+            imatge: "./img/fp.jpeg"
+        },
+        universitat: {
+            nom: "Enginyeria de la Ciberseguretat",
+            centre: "UNIR",
+            data: "2025 - 2030",
+            descripcio: "Futura estudiant d'Enginyeria de la Ciberseguretat, amb un enfocament en les tecnologies emergents de seguretat i la protecció de sistemes crítics.",
+            detalls: "Tot i que encara no he començat els estudis, tinc previst adquirir coneixements avançats en seguretat informàtica, criptografia, gestió de riscos i protecció de dades. Estic interessada en les solucions tecnològiques per afrontar les amenaces digitals actuals.",
+            imatge: "./img/ceh.jpeg"
+        }
+        ,
+        cursos_online: [
+            {
+                nom: "Ethical Hacker",
+                plataforma: "CISCO",
+                data: "2024-03-19",
+                descripcio: "Pentesting, social engineering, ethical ,hacking",
+                diploma: "https://www.credly.com/badges/e3e9f573-340b-4bae-8395-d1347a3f537f/linked_in_profile"
+               
+            },
+            {
+                nom: "Introduction to CyberSecurity",
+                plataforma: "CISCO",
+                data: "2023-10-15",
+                descripcio: "Introductory Knowledge of Cybersecurity,Understanding Vulnerabilities and Threat Detection",
+                diploma: "https://www.credly.com/badges/19d52c8d-7af3-4306-bd47-410ff32ec02d/public_url",
+               
+            }, 
+            {
+                nom: "Artificial Intelligence Fundamentals",
+                plataforma: "IBM",
+                data: "2024-06-17",
+                descripcio: "AI fundamentals, AI ethics, Watson studio, Natural Language Processing",
+                diploma: "https://www.credly.com/badges/5c53570b-8f82-415d-9c7e-c4cac515564b/linked_in_profile",
+               
+            },
+            {
+                nom: "Wireshark  Expert",
+                plataforma: "LetsDefend",
+                data: "2024-03-01",
+                descripcio: "Malware Traffic Analysis, ",
+                diploma: "https://app.letsdefend.io/my-rewards/detail/9e257ecd-06fe-4688-b45f-820e3d4c31b6",
+               
+            }
+        ]
+    };
+
+   
+    document.getElementById('sqlQuery').addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();  
+            const consulta = event.target.value.toLowerCase().trim();
+            let sortida = "";
+
+            
+            if (consulta === "select * from educacio.cursos_online;") {
+                sortida = `
+                    <div class="output-table">
+                        <table style="width: 100%; color: #00FF00; border-collapse: collapse;">
+                            <thead>
+                                <tr>
+                                    <th style="padding: 8px;">ID</th>
+                                    <th style="padding: 8px;">Nom del Curs</th>
+                                    <th style="padding: 8px;">Plataforma</th>
+                                    <th style="padding: 8px;">Data</th>
+                                    <th style="padding: 8px;">Descripció</th>
+                                    <th style="padding: 8px;">Enllaç al Diploma</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                `;
+
+                educacio.cursos_online.forEach((curs, index) => {
+                    sortida += `
+                        <tr style="border-bottom: 1px solid #444;">
+                            <td style="padding: 8px; text-align: center;">${index + 1}</td>
+                            <td style="padding: 8px;">${curs.nom}</td>
+                            <td style="padding: 8px;">${curs.plataforma}</td>
+                            <td style="padding: 8px;">${curs.data}</td>
+                            <td style="padding: 8px; max-width: 300px; word-wrap: break-word;">${curs.descripcio}</td>
+                            <td style="padding: 8px; text-align: center;">
+                                <a href="${curs.diploma}" target="_blank" style="color: #00FF00; text-decoration: none;">Veure Diploma</a>
+                            </td>
+                        </tr>
+                    `;
+                });
+
+                sortida += `
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            } else if (consulta === "select * from educacio.batxillerat;") {
+                sortida = `
+                    <div class="card fade-in">
+                        <img src="${educacio.batxillerat.imatge}" alt="Imatge Batxillerat">
+                        <div class="content">
+                            <h3>${educacio.batxillerat.nom}</h3>
+                            <p><strong>Centre:</strong> ${educacio.batxillerat.centre}</p>
+                            <p><strong>Data:</strong> ${educacio.batxillerat.data}</p>
+                            <p><strong>Descripció:</strong> ${educacio.batxillerat.descripcio}</p>
+                            <p><strong>Detalls:</strong> ${educacio.batxillerat.detalls}</p>
+                        </div>
+                    </div>
+                `;
+            } else if (consulta === "select * from educacio.fp;") {
+                sortida = `
+                    <div class="card fade-in">
+                        <img src="${educacio.fp.imatge}" alt="Imatge Formació Professional">
+                        <div class="content">
+                            <h3>${educacio.fp.nom}</h3>
+                            <p><strong>Centre:</strong> ${educacio.fp.centre}</p>
+                            <p><strong>Data:</strong> ${educacio.fp.data}</p>
+                            <p><strong>Descripció:</strong> ${educacio.fp.descripcio}</p>
+                            <p><strong>Detalls:</strong> ${educacio.fp.detalls}</p>
+                        </div>
+                    </div>
+                `;
+            } else if (consulta === "select * from educacio.universitat;") {
+                sortida = `
+                    <div class="card fade-in">
+                        <img src="${educacio.universitat.imatge}" alt="Imatge Universitat">
+                        <div class="content">
+                            <h3>${educacio.universitat.nom}</h3>
+                            <p><strong>Centre:</strong> ${educacio.universitat.centre}</p>
+                            <p><strong>Data:</strong> ${educacio.universitat.data}</p>
+                            <p><strong>Descripció:</strong> ${educacio.universitat.descripcio}</p>
+                            <p><strong>Detalls:</strong> ${educacio.universitat.detalls}</p>
+                        </div>
+                    </div>
+                `;
+            } else {
+                sortida = `<p class="error">Error: Consulta SQL no vàlida. Intenta amb alguna cosa com 'SELECT * FROM educacio.cursos_online;', 'SELECT * FROM educacio.batxillerat;', 'SELECT * FROM educacio.fp;' o 'SELECT * FROM educacio.universitat;'</p>`;
+            }
+
+            
+            const outputElement = document.getElementById('output');
+            outputElement.innerHTML = sortida;
+            event.target.value = '';  
+        }
+    });
+}
+educacio(); 
+
+/*------------------------------- SECCIÓ: FOOTER-------------------------------*/
+
 function dataFooter() {
     const ara = new Date();
     
@@ -387,3 +556,19 @@ function dataFooter() {
 
 
 dataFooter();
+
+/*------------------------------- SECCIÓ: POPUP-------------------------------*/
+function mostrarPopup() {
+    const popup = document.getElementById('popup');
+    popup.style.display = 'flex';
+
+    
+    setTimeout(function() {
+        popup.style.display = 'none';
+    }, 3000); 
+}
+
+
+window.onload = function() {
+    mostrarPopup();
+};

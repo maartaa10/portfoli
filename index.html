@@ -14,6 +14,7 @@
 
 </head>
 <body>
+    <!------------------SECCIO: NAVBAR------------------------->
     <header>
         <nav id="navbar" style="display:none;"> 
             <ul>
@@ -21,6 +22,7 @@
                 <li><a href="#projectes">Projectes</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#experiencia">Experiencia</a></li> 
+                <li><a href="#educacio">Educació</a></li>
                 <li><a href="#contacte">Contacte</a></li>
             </ul>
         </nav>
@@ -29,18 +31,26 @@
     </header>
     <audio id="musica" src="musica.mp3" preload="auto"></audio>
 
-    
+   
 <div id="content">
+      <!------------------SECCIO: BENVINGUDA------------------------->
     <section id="benvi">
+        
         <h1>Benvingut</h1>
         <button onclick="mostraInstruccions()">Comença</button>
     </section>
-
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p>Puja el volum per a una millor experiència</p>
+        </div>
+    </div>
+  <!------------------SECCIO: INSTRUCCIONS------------------------->
     <section id="instruccions" style="display: none;">
         <h2>Instruccions</h2>
         <p id="resu">  </p>
         <button id="començaBt" style="display: none;" onclick="començaEscapeRoom()">Començar</button>
     </section>
+      <!------------------SECCIO: SOBRE MI------------------------->
     <div id="principal" style="display: none;">
         <section id="sobreMi" class="seccioCont" style="display: block;">
             <h2>Sobre Mi</h2>
@@ -49,6 +59,7 @@
             <button onclick="comprovaCodiSM()">Seguent</button>
         </section>
     </div>
+      <!------------------SECCIO: PROJECTES------------------------->
     <section id="projectes" class="seccioCont" style="display: none;">
         <h2>Projectes</h2>
         <p>Resol aquesta endevinalla: ¿Qué significa '0011' en decimal?</p>
@@ -56,7 +67,7 @@
         <button onclick="comprovaCodiP()">Seguent</button>
         <div id="targ" class="projectesTot"></div>
     </section>
-      
+        <!------------------SECCIO: SKILLS------------------------->
     <section id="skills" class="seccioCont">
         <h2>Skills</h2>
         <p>Resol aquesta endevinalla: Quants segons hi ha en 1 hora?</p>
@@ -64,6 +75,7 @@
         <button onclick="comprovaSkills()">Seguent</button>
         <div id="skillsTot"></div>
     </section>
+      <!------------------SECCIO: EXPERIENCIA------------------------->
     <section id="experiencia" class="seccioCont" style="display: none;">
         <h2>Experiencia</h2>
         <p id="descripcioExperiencia" style="display: none;">Comptant amb més de 20 anys d'experiència com a hacker ètica i desenvolupadora full stack, m'agrada escriure codi net i optimitzat. Em baso en la regla del Boy Scout: "Deixa-ho tot una mica millor del que ho has trobat". Aquesta filosofia m'impulsa a millorar contínuament el codi i les solucions que implemento, sempre amb la vista posada en l'eficiència i la seguretat.</p>
@@ -72,12 +84,32 @@
         <button id="btnExperiencia" onclick="comprovaCodiExperiencia()">Seguent</button>
         <div id="mapa" style="height: 400px; display: none;"></div> 
         <div id="detallsExperiencia" style="display: none;"></div>
-        <button id="contacteBtn" style="display: none;" onclick="mostraContacte()">Següent</button> 
+        <button id="contacteBtn" style="display: none;" onclick="mostraEducacio()">Següent</button>
+
+    </section>
+      <!------------------SECCIO: EDUCACIO------------------------->
+    <section id="educacio" class="seccioCont" style="display: none;">
+        <div class="container">
+            <h2>Educació</h2>
+            <p id="acertijoEducacio">Resol aquesta endevinalla: Quina és la clau que obre totes les portes?</p>
+            <input type="text" id="codiEducacio" placeholder="Introdueix el codi">
+            <button id="btnEducacio" onclick="comprovaCodiEducacio()">Següent</button>
+        </div>
+        <div id="contingutEducacio" style="display: none;">
+           
+            <div class="query-section">
+                <input type="text" id="sqlQuery" placeholder="Escriu la teva consulta SQL...">
+            </div>
+            <div class="output" id="output">
+                <p>Escriu una consulta SQL per obtenir informació sobre la meva educación. Per veure les comandes prem ENTER</p>
+            </div>
+            <button id="contacteBtnEducacio" style="display: none;" onclick="mostraContacte()">Següent</button>
+        </div>
     </section>
     
     
     
-    
+      <!------------------SECCIO: CONTACTE------------------------->
     <section id="contacte" class="seccioCont">
         <h2>Contacte</h2>
         <div id="acertijoContacte">
@@ -102,7 +134,7 @@
         </form>
     </section>
     
-    
+      <!------------------SECCIO FINAL------------------------->
     <section id="gracies" class="seccioCont" style="display: none;">
         <div id="finalButtons">
             <p>Gràcies per jugar! Has desbloquejat totes les seccions. Pots navegar lliurement.</p>
@@ -111,6 +143,7 @@
         </div>
     </section>
 </div>
+  <!------------------SECCIO: FOOTER------------------------->
     <footer>
         <p id="dataInfo"></p>
         <p>&copy; 2024 - Marta Rodrigo</p>
