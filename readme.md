@@ -35,7 +35,7 @@ A continuació es mostren les preguntes i respostes als acertijos de cada secci�
 - **Habilitats:** Quin és el codi correcte per desbloquejar aquesta secció? - 3600
 - **Experiència:** Quin és el codi correcte per desbloquejar aquesta secció? - 3
 - **Contacte:** Quin és el codi correcte per desbloquejar aquesta secció? - 9
-- **Educacio:** Quin és el codi correcte per desbloquejar aquesta secció? - 'una clau anglesa'.
+- **Educacio:** Quin és el codi correcte per desbloquejar aquesta secció? - 'una clau mestra'.
 
 ## Llicència
 Aquest projecte està sota la Llicència MIT. Per a més detalls, consulta el fitxer [LICENSE](LICENSE).
