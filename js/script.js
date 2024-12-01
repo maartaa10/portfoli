@@ -78,16 +78,18 @@ function comprovaCodiSM() {
     if (codi === "12") {  
         document.getElementById('sobreMi').innerHTML = `
     <h2>Sobre Mi</h2>
-    <p>Hola! Em dic Marta Rodrigo, soc estudiant d'últim any de Desenvolupament d'Aplicacions Web (DAW) amb una gran passió per la ciberseguretat.<br> 
-    He completat diversos cursos en línia sobre hacking, pentesting i criptografia, i estic desitjant aplicar els meus coneixements en el món real.<br>  
-    Aprenc ràpidament i soc una persona proactiva, a qui li agraden els reptes i les noves experiències.<br>  
-    Tinc una mentalitat creativa i analítica que em permet resoldre problemes i innovar solucions.<br><br>
+   <p>Hola! Em dic Marta Rodrigo, soc estudiant d'últim any de Desenvolupament d'Aplicacions Web (DAW) amb una gran passió per la ciberseguretat.<br> 
+He completat diversos cursos en línia sobre hacking, pentesting i criptografia, i estic desitjant aplicar els meus coneixements en el món real.<br>  
+Aprenc ràpidament i soc una persona proactiva, a qui li agraden els reptes i les noves experiències.<br>  
+Tinc una mentalitat creativa i analítica que em permet resoldre problemes i innovar solucions.<br><br>
 
-    El meu interès per la ciberseguretat va començar quan tenia uns 9-10 anys, quan vaig descobrir Jumpstart, una eina que permetia explorar les vulnerabilitats del sistema Wi-Fi WEP. <br>
-    Aquest sistema de seguretat, que era força comú a l'època, utilitzava una clau fixa i poc segura que es podia desxifrar fàcilment (per això va ser substituït per WPA i WPA2). <br> 
-    Amb aquella eina vaig "hackejar" la contrasenya del WiFi d'un veí, i tot i que la meva acció no era ètica (i no ho recomano), va ser amb aquesta experiència quan em vaig quedar fascinada pel potencial de la ciberseguretat i, des de llavors, no he deixat d’aprendre'n més. Estic emocionada de seguir explorant aquest camp, aplicar el que sé i afrontar els nous reptes que sorgeixen cada dia.</p>
-    
-    <img src="./img/sobremi.jpeg" alt="" style="max-width: 50%; height: auto;"/>
+El meu interès per la ciberseguretat va començar quan tenia uns 9-10 anys, quan vaig descobrir Jumpstart, una eina que permetia explorar les vulnerabilitats del sistema Wi-Fi WEP. <br>
+Aquest sistema de seguretat, que era força comú a l'època, utilitzava una clau fixa i poc segura que es podia desxifrar fàcilment (per això va ser substituït per WPA i WPA2). <br> 
+Amb aquella eina vaig "hackejar" la contrasenya del WiFi d'un veí, i tot i que la meva acció no era ètica (i no ho recomano), va ser amb aquesta experiència quan em vaig quedar fascinada pel potencial de la ciberseguretat i, des de llavors, no he deixat d’aprendre'n més. Estic emocionada de seguir explorant aquest camp, aplicar el que sé i afrontar els nous reptes que sorgeixen cada dia.<br><br>
+<em>Nota: Aquesta xarxa ja no existeix, i la història es comparteix només com una anècdota sobre els meus inicis en la ciberseguretat.</em></p>
+
+<img src="./img/sobremi.jpeg" alt="" style="max-width: 50%; height: auto;"/>
+
     <br>
     <button onclick="mostraProjectes()">Seguent Repte!</button>
 `;
@@ -157,21 +159,21 @@ function comprovaSkills() {
                     <div class="skillTarg">
                         <h4>HTML</h4>
                         <div class="barra">
-                            <div class="prog" style="width: 70%;"></div>
+                            <div class="prog" style="width: 40%;"></div>
                         </div>
                         <p class="skillNivell">Nivell: Basic</p>
                     </div>
                     <div class="skillTarg">
                         <h4>CSS</h4>
                         <div class="barra">
-                            <div class="prog" style="width: 60%;"></div>
+                            <div class="prog" style="width: 40%;"></div>
                         </div>
                         <p class="skillNivell">Nivell: Basic</p>
                     </div>
                     <div class="skillTarg">
                         <h4>JavaScript</h4>
                         <div class="barra">
-                            <div class="prog" style="width: 50%;"></div>
+                            <div class="prog" style="width: 20%;"></div>
                         </div>
                         <p class="skillNivell">Nivell: Basic</p>
                     </div>
@@ -202,14 +204,14 @@ function comprovaSkills() {
                         <p class="skillNivell">Nivell: Basic</p>
                     </div>
                     <div class="skillTarg">
-                        <h4>Español</h4>
+                        <h4>Espanyol</h4>
                         <div class="barra">
                             <div class="prog" style="width: 100%;"></div>
                         </div>
                         <p class="skillNivell">Nivell: Natiu</p>
                     </div>
                     <div class="skillTarg">
-                        <h4>Catala</h4>
+                        <h4>Català</h4>
                         <div class="barra">
                             <div class="prog" style="width: 100%;"></div>
                         </div>
